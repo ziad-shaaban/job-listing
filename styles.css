@@ -1,0 +1,274 @@
+@import url("https://fonts.googleapis.com/css2?family=League+Spartan:wght@500;700&display=swap");
+:root {
+  /*Primary*/
+  --col-desaturated-dark-cyan: #5ba4a4;
+  /*Neutral*/
+  --col-light-grayish-cyan-background: hsl(180, 52%, 96%);
+  --col-light-grayis-cyan-filter-tablets: hsl(180, 31%, 95%);
+  --col-dark-grayish-cyan: hsl(180, 8%, 52%);
+  --col-very-dark-grayish-cyan: hsl(180, 14%, 20%);
+
+  font-size: 15px;
+  font-family: "League Spartan", sans-serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 101vh;
+  background-color: var(--col-light-grayish-cyan-background);
+}
+
+main {
+  margin-top: 7rem;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+header {
+  position: relative;
+}
+
+nav {
+  display: flex;
+  position: absolute;
+  padding: 1rem;
+  background-color: white;
+  margin: 1.5rem;
+  width: calc(100% - 3rem);
+  bottom: -90px;
+  min-height: 100px;
+  border-radius: 0.5rem;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+.desktop {
+  display: none;
+}
+
+.filter {
+  width: 85%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.clear {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 15%;
+  font-weight: 800;
+  color: var(--col-dark-grayish-cyan);
+  cursor: pointer;
+}
+
+.box {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border-left: 0.5rem solid var(--col-desaturated-dark-cyan);
+  box-shadow: 0 10px 20px 0px var(--col-dark-grayish-cyan);
+}
+
+.extra-info {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.features-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.features-wrapper .company {
+  color: var(--col-desaturated-dark-cyan);
+  margin-right: 1rem;
+  font-size: 1rem;
+}
+
+.features-wrapper .new-tag {
+  padding: 0.4rem 0.5rem;
+  background-color: var(--col-desaturated-dark-cyan);
+  color: white;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+.features-wrapper .featured-tag {
+  padding: 0.4rem 0.5rem;
+  background-color: black;
+  color: white;
+  border-radius: 1rem;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.position {
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.position:hover {
+  color: var(--col-desaturated-dark-cyan);
+}
+
+.info-wrapper {
+  display: flex;
+  gap: 0.5rem;
+  color: var(--col-dark-grayish-cyan);
+}
+
+.languages-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.language-tag {
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 800;
+  color: var(--col-desaturated-dark-cyan);
+  background-color: var(--col-light-grayish-cyan-background);
+  cursor: pointer;
+}
+
+.language-tag:hover {
+  background-color: var(--col-desaturated-dark-cyan);
+  color: white;
+}
+
+.filter-tag {
+  height: min-content;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
+  border-radius: 0.25rem;
+  font-weight: 800;
+  color: var(--col-desaturated-dark-cyan);
+  background-color: var(--col-light-grayish-cyan-background);
+  cursor: pointer;
+}
+
+.filter-tag:hover {
+  background-color: var(--col-desaturated-dark-cyan);
+  color: white;
+}
+
+.photo {
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top: 0;
+  transform: translateY(-50%);
+}
+
+@media (min-width: 900px) {
+  .desktop {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+  nav {
+    max-width: 1400px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -50px;
+  }
+  main {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1400px;
+  }
+  .box {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+
+  .box1 {
+    display: flex;
+  }
+
+  .clear {
+    font-size: 1.25rem;
+  }
+
+  .photo {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    top: 50%;
+    left: 0;
+  }
+
+  .extra-info {
+    margin-left: 3rem;
+    justify-content: center;
+  }
+
+  hr {
+    display: none;
+  }
+
+  .language-tag {
+    height: min-content;
+  }
+
+  .languages-wrapper {
+    align-items: center;
+  }
+
+  .features-wrapper {
+    margin-top: 0;
+  }
+
+  .features-wrapper .company {
+    font-size: 1.25rem;
+  }
+
+  .features-wrapper .new-tag {
+    font-size: 1rem;
+  }
+  .features-wrapper .featured-tag {
+    font-size: 1rem;
+  }
+
+  .position {
+    font-size: 1.25rem;
+  }
+
+  .info-wrapper {
+    font-size: 1.25rem;
+  }
+
+  .language-tag {
+    font-size: 1.25rem;
+  }
+
+  .filter-tag {
+    font-size: 1.25rem;
+  }
+}
